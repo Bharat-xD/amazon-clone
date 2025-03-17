@@ -1,0 +1,43 @@
+.footer-list{
+  background: #232F3E;
+  color: white;
+  margin: 80px 0 0 0;
+}
+
+.contact-container{
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+}
+
+.in-box{
+  display: flex;
+  flex-direction: column;
+  padding: 0  20px;
+}
+
+.in-box a{
+  padding: 5px 0;
+  color: white;
+}
+
+.contactlist-heading{
+  font-weight: 900;
+}
+
+.user-location{
+  display: flex;
+  justify-content: center;
+}
+
+.user-location img{
+  width: 90px;
+  height: 40px;
+}
+
+.copyright{
+  padding: 40px 0;
+  background: #131A22;
+  display: flex;
+  justify-content: center;
+}
