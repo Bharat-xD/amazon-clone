@@ -24,10 +24,39 @@ products.forEach((product) => {
           </select>
         </div>
       </section>
-        <button class="atc-btn">Add to Cart</button>
+        <button class="atc-btn js-atc-btn"
+        data-product-name="${product.name}">Add to Cart</button>
       </div>`;
 });
 
-console.log(productsHTML);
-
 document.querySelector('.js-products-grid').innerHTML = productsHTML;
+
+
+// add-to-cart button
+document.querySelectorAll('.js-atc-btn').forEach((button) => {
+  button.addEventListener('click', () => {
+    const productName = button.dataset.productName
+
+
+    let sameItem;
+
+    cart.forEach((item) => {
+      if(productName === item.productName){
+        sameItem = item;
+      }
+    });
+
+
+    if(sameItem){
+      sameItem.quantity += 1;
+    }
+    else{
+      cart.push({
+        productName: productName,
+        quantity: 1
+      });
+    }
+
+    console.log(cart);
+  });
+});
