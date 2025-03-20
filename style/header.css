@@ -69,12 +69,21 @@
 
 .dropdown:hover .drop-content{
   display: block;
-
 }
 
 .middle-section{
   display: inline-flex;
   align-self: center;
+}
+
+.right-section{
+  display: flex;
+  margin: 12px 40px 0 0;
+}
+
+.right-section a{
+  color: white;
+  text-decoration: none;
 }
 
 .shopping-cart{
@@ -86,13 +95,11 @@
   width: 34px;
 }
 
-.right-section{
-  display: flex;
-  color: white;
-
+.cart-quantity{
+  margin: 0 0 0 15px;
 }
 
-.right-section p{
-  text-align:star;
-  padding: 20px 50px 0 0;
+.cart-qnt-txt{
+  display: flex;
+  display: inline-table;
 }
