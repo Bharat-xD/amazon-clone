@@ -78,7 +78,7 @@
 
 .right-section{
   display: flex;
-  margin: 12px 40px 0 0;
+  margin: 0 40px 0 0;
 }
 
 .right-section a{
@@ -97,6 +97,7 @@
 
 .cart-quantity{
   margin: 0 0 0 15px;
+  color: #eba64b;
 }
 
 .cart-qnt-txt{

@@ -1,5 +1,5 @@
 //product data
-const products = [
+export const products = [
   { image: '/images/066464a5-760b-4afa-9dc0-11e2da5e42e3.jpeg',
   name: '7 Shirt Combo - for men',
   rating: {
