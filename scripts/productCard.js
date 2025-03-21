@@ -1,4 +1,4 @@
-import {cart} from "./cart.js";
+import {cart, addToCart} from "./cart.js";
 import {products} from "./product-data.js";
 // function for making the product card
 let productsHTML = '';
@@ -34,38 +34,23 @@ products.forEach((product) => {
 document.querySelector('.js-products-grid').innerHTML = productsHTML;
 
 
-// add-to-cart button
-document.querySelectorAll('.js-atc-btn').forEach((button) => {
-  button.addEventListener('click', () => {
-    const productName = button.dataset.productName
 
 
-    let sameItem;
 
-    cart.forEach((item) => {
-      if(productName === item.productName){
-        sameItem = item;
-      }
-    });
+function updatedCartQty(){
+  let cartQuantity = 0;
 
-
-    if(sameItem){
-      sameItem.quantity += 1;
-    }
-    else{
-      cart.push({
-        productName: productName,
-        quantity: 1
-      });
-    }
-
-
-    let cartQuantity = 0;
-
-    cart.forEach((item) =>{
-      cartQuantity += item.quantity;
+    cart.forEach((cartItem) =>{
+      cartQuantity += cartItem.quantity;
     });
 
     document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
+}
+
+document.querySelectorAll('.js-atc-btn').forEach((button) => {
+  button.addEventListener('click', () => {
+    const productName = button.dataset.productName;
+    addToCart(productName);
+    updatedCartQty();   
   });
 });
