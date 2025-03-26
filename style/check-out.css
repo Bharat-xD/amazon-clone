@@ -1,0 +1,43 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.logo img{
+  width: 110px;
+}
+
+.check-out-header{
+  display: flex;
+  justify-content: space-between;
+}
+
+.check-out-qty{
+  font-size:x-large;
+  padding: 15px 0 0 0;
+}
+
+.lock img{
+  width: 25px;
+  padding: 10px 10px 0 0;
+}
+
+.check-out-page-content{
+  margin: 30px 30px;
+}
+
+.product-content{
+  width: 750px;
+  height: 300px;
+  padding: 10px 15px;
+  display: flex;
+  border: 1px solid grey;
+  border-radius: 6px;
+  justify-content: space-between;
+}
+
+.product-img img{
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
