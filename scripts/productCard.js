@@ -9,7 +9,7 @@ products.forEach((product) => {
         <img class="p-img card-padding" src="${product.image}" alt="">
         <section class="text-area">
         <div class="p-name card-padding">${product.name}</div>
-        <div class="rating-star card-padding"><img src="/images/rating-${product.rating.stars}.png" alt="">${product.rating.count}</div>
+        <div class="rating-star card-padding"><img src="./images/rating-${product.rating.stars}.png" alt="">${product.rating.count}</div>
         <h2 class="p-price">$ ${(product.priceCents / 100).toFixed(2)}</h2>
           <div class="product-quantity-container card-padding">
           <select class="js-quantity-selector" data-testid="quantity-selector">
